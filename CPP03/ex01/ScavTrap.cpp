@@ -1,0 +1,67 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/06 15:49:59 by ebassi            #+#    #+#             */
+/*   Updated: 2022/10/06 16:03:07 by ebassi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap(void)
+{
+	this->_name = "Default";
+	this->_health = _maxHealth;
+	this->_energy = _maxEnergy;
+	this->_atk_damage = _max_atk_damage;
+	std::cout << "Default constructor called" << std::endl;
+}
+
+ScavTrap::ScavTrap(std::string name)
+{
+	this->_name = name;
+	this->_health = _maxHealth;
+	this->_energy = _maxEnergy;
+	this->_atk_damage = _max_atk_damage;
+	std::cout << "Name constructor called" << std::endl;
+}
+
+ScavTrap::ScavTrap(ScavTrap const & src)
+{
+	*this = src;
+}
+
+ScavTrap::~ScavTrap()
+{
+	std::cout << "Destructor called" << std::endl;
+}
+
+ScavTrap& ScavTrap::operator=(ScavTrap const & equals) {
+	this->_name = equals._name;
+	this->_health = equals._health;
+	this->_energy = equals._energy;
+	this->_atk_damage = equals._atk_damage;
+	return (*this);
+}
+
+void ScavTrap::attack(const std::string& target)
+{
+	if (!getHealth() || !getEnergy())
+	{
+		std::cout << "No points to attack!" << std::endl;
+		return ;
+	}
+	else
+		this->_energy--;
+	this->_atk_damage++;
+	std::cout << "ScavTrap " << getName() << " attacks " << target << ", causing " << getAttackDamage() << " points of damage!" << std::endl;
+}
+
+void ScavTrap::guardGate(void)
+{
+	std::cout << "ScavTrap is in Gate keeper mode!" << std::endl;
+}
