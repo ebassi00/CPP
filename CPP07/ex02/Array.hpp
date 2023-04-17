@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:36:19 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/14 16:08:25 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/04/03 13:53:00 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,60 @@
 
 #include <iostream>
 
-template<typename T>
+template <class T>
 class Array
 {
+	public:
+		Array() : _size(0)
+		{
+			arr = new T[0];
+		}
 
-public:
-	Array(void);
-	Array(unsigned int n);
-	Array(Array const &rhs);
-	Array &operator=(Array const &rhs);
-	~Array(void);
+		Array(unsigned int size) : _size(size)
+		{
+			arr = new T[size];
+		}
 
-	int size(void) const;
-	T getValue(unsigned int idx) const;
-	void setValue(T value, unsigned int idx);
-	class IndexOutOfBounds : public std::exception
+		Array(Array const &a)
+		{
+			this->arr = NULL;
+			*this = a;
+		}
+
+		Array &operator=(Array const &a)
+		{
+			if (arr != NULL)
+				delete[] arr;
+			if (a._size != 0)
+			{
+				_size = a._size;
+				arr = new T[_size];
+				for (size_t i = 0; i < _size; i++)
+					arr[i] = a.arr[i];
+			}
+			return (*this);
+		}
+
+		virtual ~Array() {
+			if (this->arr != NULL)
+				delete[] arr;
+		}
+
+		T &operator[](unsigned int i) { if (i < _size) return arr[i]; else throw Array<T>::InvalidIndexException(); }
+		class	InvalidIndexException : public std::exception
 		{
 			public:
-				virtual const char * what() const throw()
-				{
-					return ("Index out of bound");
-				}
+				virtual const char	*what() const throw();
 		};
-private:
-	unsigned int _size;
-	T *_arr;
+	private:
+		T*	arr;
+		unsigned int _size;
 };
 
-#include "Array.tpp"
+template <typename T>
+const char	*Array<T>::InvalidIndexException::what() const throw()
+{
+	return ("Error: Invalid index");
+}
 
 #endif

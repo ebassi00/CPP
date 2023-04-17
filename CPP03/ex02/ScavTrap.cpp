@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 15:49:59 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/06 16:09:50 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/20 16:55:31 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ScavTrap::ScavTrap(void)
 	this->_health = _maxHealth;
 	this->_energy = _maxEnergy;
 	this->_atk_damage = _max_atk_damage;
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ScavTrap: Default constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name)
@@ -27,7 +27,7 @@ ScavTrap::ScavTrap(std::string name)
 	this->_health = _maxHealth;
 	this->_energy = _maxEnergy;
 	this->_atk_damage = _max_atk_damage;
-	std::cout << "Name constructor called" << std::endl;
+	std::cout << "ScavTrap: Name constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const & src)

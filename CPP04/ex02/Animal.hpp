@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:17:36 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/07 16:11:45 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/20 18:03:54 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Animal
 {
 
 public:
-	void makeSound(void) const;
+	virtual void makeSound(void) const = 0;
 	std::string getType(void) const;
 	void setType(std::string type);
 

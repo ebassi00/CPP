@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 16:04:57 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/06 16:10:14 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/20 16:55:17 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ FragTrap::FragTrap(void)
 	this->_health = _maxHealth;
 	this->_energy = _maxEnergy;
 	this->_atk_damage = _max_atk_damage;
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "FragTrap: Default constructor called" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name)
@@ -27,7 +27,7 @@ FragTrap::FragTrap(std::string name)
 	this->_health = _maxHealth;
 	this->_energy = _maxEnergy;
 	this->_atk_damage = _max_atk_damage;
-	std::cout << "Name constructor called" << std::endl;
+	std::cout << "FragTrap: Name constructor called" << std::endl;
 }
 
 FragTrap::FragTrap(FragTrap const & src)

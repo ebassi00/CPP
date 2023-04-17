@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:18:33 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/07 15:56:26 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/20 18:05:46 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ public:
 	virtual ~Dog();
 	Dog& operator=(Dog const & rhs);
 	void printBrain(void) const;
+	void makeSound(void) const;
 	Brain* getBrain(void) const;
 	void copyBrain(Brain* b);
 

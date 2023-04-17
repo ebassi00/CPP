@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:17:36 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/06 18:34:09 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/20 17:57:44 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Animal(Animal const & rhs);
 	virtual ~Animal();
 	Animal&	operator=(Animal const & rhs);
-	void makeSound(void) const;
+	virtual void makeSound(void) const;
 	std::string getType(void) const;
 	void setType(std::string type);
 

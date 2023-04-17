@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:08:33 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/11 16:25:40 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/22 14:14:47 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PRESIDENTIALPARDONFORM_HPP
 
 #include <string>
-#include "Form.hpp"
+#include "AForm.hpp"
 
 class PresidentialPardonForm: public Form
 {

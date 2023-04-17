@@ -20,8 +20,8 @@
 class Base
 {
 
-public:
-	virtual ~Base(void);
+	public:
+		virtual ~Base(void);
 };
 
 class A : public Base

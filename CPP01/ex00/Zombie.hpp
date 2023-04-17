@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 17:58:08 by ebassi            #+#    #+#             */
-/*   Updated: 2022/03/31 18:27:05 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/20 14:35:27 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class Zombie {
 
 public:
-
 	Zombie(std::string name);
 	~Zombie();
 

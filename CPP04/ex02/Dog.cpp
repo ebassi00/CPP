@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:37:22 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/07 16:07:52 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/20 18:05:32 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,11 @@ void Dog::copyBrain(Brain* b)
 Brain*	Dog::getBrain(void) const
 {
 	return (this->_brain);
+}
+
+void    Dog::makeSound( void ) const
+{
+    std::cout << "Woof!" << std::endl;
 }
 
 std::ostream&	operator<<(std::ostream& os, Dog const & an)

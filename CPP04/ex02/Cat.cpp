@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:34:45 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/07 16:03:19 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/20 18:05:17 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,11 @@ void Cat::copyBrain(Brain* b)
 	i = -1;
 	while (++i < 100)
 		this->_brain->setIdea(b->getIdea(i), i);
+}
+
+void    Cat::makeSound( void ) const
+{
+    std::cout << "Meow!" << std::endl;
 }
 
 std::ostream&	operator<<(std::ostream& os, Cat const & an)

@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 14:08:49 by ebassi            #+#    #+#             */
-/*   Updated: 2022/04/04 16:59:58 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/20 15:53:34 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ Fixed::Fixed() :
 Fixed::Fixed(const float nbr) :
 	_rawBits(roundf(nbr *(1 << this->_bit)))
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::Fixed(const int nbr) :
 	_rawBits(nbr << this->_bit)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &obj)
@@ -50,13 +50,11 @@ Fixed::~Fixed()
 
 void Fixed::setRawBits(int const raw)
 {
-	std::cout << "setRawBits member function called" << std::endl;
 	this->_rawBits = raw;
 }
 
 int Fixed::getRawBits() const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_rawBits);
 }
 

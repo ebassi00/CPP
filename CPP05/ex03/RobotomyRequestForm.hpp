@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:09:04 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/11 16:25:49 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/22 14:16:54 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ROBOTOMYREQUESTFORM_HPP
 
 #include <string>
-#include "Form.hpp"
+#include "AForm.hpp"
 
 class RobotomyRequestForm: public Form
 {

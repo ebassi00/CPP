@@ -6,7 +6,7 @@
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:19:18 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/07 15:54:23 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/20 18:05:53 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
 	Cat& operator=(Cat const & rhs);
 	void printBrain(void) const;
 	Brain* getBrain(void) const;
+	void makeSound(void) const;
 	void copyBrain(Brain* b);
 
 private:

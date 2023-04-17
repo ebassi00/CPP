@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebassi <ebassi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:10:18 by ebassi            #+#    #+#             */
-/*   Updated: 2022/10/11 16:55:44 by ebassi           ###   ########.fr       */
+/*   Updated: 2023/03/22 14:15:01 by ebassi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Form::Form(std::string const &name, int const grade_required, int const grade_execute) : _name(name), _sign(false),
 				_grade_required(grade_required), _grade_execute(grade_execute)
