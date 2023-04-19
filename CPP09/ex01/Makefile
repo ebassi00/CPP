@@ -1,11 +1,11 @@
-NAME = btc
-SRCS = main.cpp BitcoinExchange.cpp
-HEADERS = BitcoinExchange.hpp
+NAME = RPN
+SRCS = main.cpp RPN.cpp
+HEADERS = RPN.hpp
 COMPILE = c++ -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-btc:
+RPN:
 	$(COMPILE) $(SRCS) -o $(NAME)
 
 clean:

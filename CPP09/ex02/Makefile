@@ -1,11 +1,11 @@
-NAME = btc
-SRCS = main.cpp BitcoinExchange.cpp
-HEADERS = BitcoinExchange.hpp
+NAME = PmergeMe
+SRCS = main.cpp PmergeMe.cpp
+HEADERS = PmergeMe.hpp
 COMPILE = c++ -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-btc:
+PmergeMe:
 	$(COMPILE) $(SRCS) -o $(NAME)
 
 clean:
